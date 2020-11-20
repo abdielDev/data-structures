@@ -51,6 +51,7 @@ export default class Deque {
     }
     let removedElement = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
+    this.lowestCount++;
     return removedElement;
   }
   removeBack() {
