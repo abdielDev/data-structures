@@ -4,7 +4,8 @@ import { hanoi, hanoiStack } from "./algorithms/hanoi.js";
 import Queue from "./queues/queue.js";
 import Deque from "./queues/deque.js";
 import hotPotato from "./algorithms/hotPotato.js";
-import palindromeChecker from "./algorithms/palindromeChecker.js";
+// import palindromeChecker from "./algorithms/palindromeChecker.js";
+import palindromeCheckerStack from "./algorithms/palindromeCheckerStack.js";
 
 // console.log(decimalToBinary(233));	//	11101001
 // console.log(decimalToBinary(10));	//	1010
@@ -53,9 +54,11 @@ import palindromeChecker from "./algorithms/palindromeChecker.js";
 // });
 // console.log(`The	winner	is:	${result.winner}`);
 
-console.log('a',	palindromeChecker('a'));
-console.log('aa',	palindromeChecker('aa'));
-console.log('kayak',	palindromeChecker('kayak'));
-console.log('level',	palindromeChecker('level'));
-console.log('Was it a car or a cat I saw',	palindromeChecker('Was it a car or a cat I saw'));
-console.log('Step on no pets',	palindromeChecker('Step on no pets'));
+// console.log('a',	palindromeChecker('a'));
+// console.log('aa',	palindromeChecker('aa'));
+// console.log('kayak',	palindromeChecker('kayak'));
+// console.log('level',	palindromeChecker('level'));
+// console.log('Was it a car or a cat I saw',	palindromeChecker('Was it a car or a cat I saw'));
+// console.log('Step on no pets',	palindromeChecker('Step on no pets'));
+
+console.log(palindromeCheckerStack('racecar'));
