@@ -8,7 +8,6 @@ export default function	hotPotato(elementsList,	num)	{
   }
   while	(queue.size()	>	1)	{
       for	(let	i	=	0;	i	<	num;	i++)	{
-        debugger
           queue.enqueue(queue.dequeue());	//	{3}
       }
       eliminatedList.push(queue.dequeue());	//	{4}

@@ -4,6 +4,7 @@ import { hanoi, hanoiStack } from "./algorithms/hanoi.js";
 import Queue from "./queues/queue.js";
 import Deque from "./queues/deque.js";
 import hotPotato from "./algorithms/hotPotato.js";
+import palindromeChecker from "./algorithms/palindromeChecker.js";
 
 // console.log(decimalToBinary(233));	//	11101001
 // console.log(decimalToBinary(10));	//	1010
@@ -45,9 +46,16 @@ import hotPotato from "./algorithms/hotPotato.js";
 // deque.addFront('Front');
 // console.log(deque.toString());
 
-const	names	=	['John',	'Jack',	'Camila',	'Ingrid',	'Carl'];
-const	result	=	hotPotato(names,	7);
-result.eliminated.forEach(name	=>	{
-		console.log(`${name}	was	eliminated	from	the	Hot	Potato	game.`);
-});
-console.log(`The	winner	is:	${result.winner}`);
+// const	names	=	['John',	'Jack',	'Camila',	'Ingrid',	'Carl'];
+// const	result	=	hotPotato(names,	7);
+// result.eliminated.forEach(name	=>	{
+// 		console.log(`${name}	was	eliminated	from	the	Hot	Potato	game.`);
+// });
+// console.log(`The	winner	is:	${result.winner}`);
+
+console.log('a',	palindromeChecker('a'));
+console.log('aa',	palindromeChecker('aa'));
+console.log('kayak',	palindromeChecker('kayak'));
+console.log('level',	palindromeChecker('level'));
+console.log('Was it a car or a cat I saw',	palindromeChecker('Was it a car or a cat I saw'));
+console.log('Step on no pets',	palindromeChecker('Step on no pets'));
