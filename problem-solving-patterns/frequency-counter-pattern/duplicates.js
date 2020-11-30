@@ -9,3 +9,8 @@ function areThereDuplicates(...args) {
   }
   return false
 }
+
+// linear solution
+function areThereDuplicates() {
+  return new Set(arguments).size !== arguments.length;
+}
