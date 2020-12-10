@@ -7,4 +7,5 @@ function reverse(string){
       helper(position - 1)
   }
   helper(string.length - 1)
+  return resultString
 }
