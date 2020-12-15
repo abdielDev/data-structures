@@ -10,7 +10,9 @@ function selectionSort(arr) {
         small = j
       }
     }
-    swap(arr, i, small)
+    if(i !== small) {
+      swap(arr, i, small)
+    }
   }
   return arr
 }
