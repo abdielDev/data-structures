@@ -29,9 +29,9 @@ function mergeSort(arr) {
   const arr1 = arr.slice(0, halfLength)
   const arr2 = arr.slice(halfLength, arr.length)
   console.log(arr1, arr2)
-  const arr1Splited = mergeSort(arr1)
-  const arr2Splited = mergeSort(arr2)
-  return merge(arr1Splited, arr2Splited)
+  const arr1Split = mergeSort(arr1)
+  const arr2Split = mergeSort(arr2)
+  return merge(arr1Split, arr2Split)
 }
 
 mergeSort([1,4,62,2, 7, 9, 100, 55])
