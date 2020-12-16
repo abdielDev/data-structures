@@ -26,11 +26,8 @@ function mergeSort(arr) {
   if(arr.length <= 1) return arr
   let halfLength = Math.round((arr.length) / 2)
   
-  const arr1 = arr.slice(0, halfLength)
-  const arr2 = arr.slice(halfLength, arr.length)
-  console.log(arr1, arr2)
-  const arr1Split = mergeSort(arr1)
-  const arr2Split = mergeSort(arr2)
+  const arr1Split = mergeSort(arr.slice(0, halfLength))
+  const arr2Split = mergeSort(arr.slice(halfLength))
   return merge(arr1Split, arr2Split)
 }
 
