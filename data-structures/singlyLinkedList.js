@@ -82,14 +82,8 @@ class SinglyLinkedList {
   }
   insert(val, index) {
     if(index < 0 || index > this.length) return false;
-    if(index === this.length) {
-      this.push(val);
-      return true;
-    }
-    if(index === 0) {
-      this.unshift(val);
-      return true;
-    }
+    if(index === this.length) !!this.push(val);
+    if(index === 0) !!this.unshift(val);
     const preNode = this.get(index - 1);
     const newNode = new Node(val);
     const oldNextNodePreNode = preNode.next;
