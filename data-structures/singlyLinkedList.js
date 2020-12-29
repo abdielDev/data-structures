@@ -65,7 +65,7 @@ class SinglyLinkedList {
     return this;
   }
   get(index) {
-    if(index < 0 || index > this.length) return null;
+    if(index < 0 || index >= this.length) return null;
     let count = 0;
     let node = this.head;
     while(count < index) {
