@@ -92,4 +92,29 @@ class SinglyLinkedList {
     this.length++;
     return true;
   }
+  remove(index) {
+    if(index < 0 || index >= this.length) return undefined;
+    if(index === this.length - 1) return this.pop();
+    if(index === 0) return this.shift();
+    const preNode = this.get(index - 1);
+    const removedNode = preNode.next;
+    preNode.next = removedNode.next;
+    this.length--;
+    return removedNode;
+  }
+  reverse() {
+    let temp = this.head;
+    this.head = this.tail;
+    this.tail = temp;
+    let next;
+    let prev = null;
+    let node = this.tail;
+    while(node) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
