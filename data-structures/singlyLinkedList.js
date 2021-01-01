@@ -102,8 +102,8 @@ class SinglyLinkedList {
     this.length--;
     return removedNode;
   }
-  reverse() {
-    let temp = this.head;
+  reverse(){
+    const temp = this.head;
     this.head = this.tail;
     this.tail = temp;
     let next;
@@ -112,6 +112,9 @@ class SinglyLinkedList {
     while(node) {
       next = node.next;
       node.next = prev;
+      if(next) {
+        next.prev = node;
+      }
       prev = node;
       node = next;
     }
