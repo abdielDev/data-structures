@@ -13,7 +13,7 @@ class Queue {
       this.last.next = node;
       this.last = node;
     }
-    this.size++;
+    return this.size++;
   }
   dequeue() {
     if(!this.first) return null;
