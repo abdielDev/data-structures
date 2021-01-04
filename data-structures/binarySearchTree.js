@@ -28,6 +28,26 @@ class BinarySearchTree {
       }
     }
   }
+  contains(value) {
+    if(!this.root) return false;
+    let current = this.root;
+    while(true) {
+      if(current.value === value) return true;
+      if(value > current.value) {
+        if(current.right) {
+          current = current.right;
+        } else {
+          return false;
+        }
+      } else {
+        if(current.left) {
+          current = current.left;
+        } else {
+          return false;
+        }
+      }
+    }
+  }
 }
 
 class Node {
