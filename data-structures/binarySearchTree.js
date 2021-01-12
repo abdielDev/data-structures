@@ -72,6 +72,28 @@ class BinarySearchTree {
     helperFunction(current);
     return visited;
   }
+  DFSPostOrder() {
+    const visited = [];
+    let current = this.root;
+    function helperFunction(node) {
+      if(node.left) helperFunction(node.left);
+      if(node.right) helperFunction(node.right);
+      visited.push(node.value);
+    }
+    helperFunction(current);
+    return visited;
+  }
+  DFSInOrder() {
+    const visited = [];
+    let current = this.root;
+    function helperFunction(node) {
+      if(node.left) helperFunction(node.left);
+      visited.push(node.value);
+      if(node.right) helperFunction(node.right);
+    }
+    helperFunction(current);
+    return visited;
+  }
 }
 
 class Node {
